@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="amazonTest">
+<listeners>
+     <listener class-name="com.qa.utility.Reporting"/>
+</listeners> 
+<parameter name ="url" value="https://www.amazon.com/"></parameter>
+  <test thread-count="5" name="Testonchrome" parallel="classes">
+  <parameter name ="browser" value="chrome"/>
+  <classes>
+   <class name="com.qa.testScripts.Tc_HtmlLog"/>
+  </classes>
+  </test> <!-- Test -->
+  <!--  
+  <test thread-count="5" name="Testonfirefox" parallel="classes">
+  <parameter name ="browser" value="firefox"/>
+  <classes>
+   <class name="com.qa.testScripts.Tc_AmazonSearch_002"/>
+  </classes>
+  </test> 
+ 
+  <test thread-count="5" name="Testonedge" parallel="classes">
+  <parameter name ="browser" value="edge"/>
+  <classes>
+   <class name="com.qa.testScripts.Tc_AmazonSearch_002"/>
+  </classes>
+  </test> 
+  -->
+</suite> <!-- Suite -->
