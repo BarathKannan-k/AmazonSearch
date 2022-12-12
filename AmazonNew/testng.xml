@@ -4,11 +4,11 @@
 <listeners>
      <listener class-name="com.qa.utility.Reporting"/>
 </listeners> 
-<parameter name ="url" value="https://www.amazon.com/"></parameter>
+<parameter name ="url" value="https://www.amazon.in/"></parameter>
   <test thread-count="5" name="Testonchrome" parallel="classes">
   <parameter name ="browser" value="chrome"/>
   <classes>
-   <class name="com.qa.testScripts.Tc_HtmlLog"/>
+   <class name="com.qa.testScripts.Tc_Exercise_05"/>
   </classes>
   </test> <!-- Test -->
   <!--  

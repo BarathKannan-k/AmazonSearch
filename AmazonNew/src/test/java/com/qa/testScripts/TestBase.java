@@ -14,12 +14,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+
+import com.qa.pages.Exercise_05;
 //import com.qa.pages.AmazonPages;
 //import com.qa.pages.Exercise_01;
 //import com.qa.pages.Exercise_02;
 //import com.qa.pages.Exercise_03;
 //import com.qa.pages.Exercise_04;
-import com.qa.pages.HtmlLog;
+//import com.qa.pages.HtmlLog;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -29,8 +31,9 @@ public class TestBase {
 	// Exercise_01 Exercise;
 	// Exercise_02 exe2;
 	// Exercise_03 exe;
-	HtmlLog log;
+	//HtmlLog log;
 	// Exercise_04 scroll;
+	Exercise_05 mobtel;
 	WebDriver driver;
 
 	@Parameters({ "browser", "url" })
@@ -54,7 +57,8 @@ public class TestBase {
 		// exe2 = new Exercise_02(driver);
 		// exe = new Exercise_03(driver);
 		// scroll = new Exercise_04(driver);
-		log = new HtmlLog(driver);
+		//log = new HtmlLog(driver);
+		mobtel =new Exercise_05(driver);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
